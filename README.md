@@ -1,5 +1,4 @@
 # Elegant_Calculator
-# NovianNurrohman - 1841720095
 Features - 
 1) Responsive UI.
 2) It can perform all basic operations.

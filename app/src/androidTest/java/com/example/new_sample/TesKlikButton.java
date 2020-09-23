@@ -105,10 +105,30 @@ public class TesKlikButton {
     }
 
     @Test
+    public void tesKlikButtonPara2(){
+
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("Error")));
+    }
+
+    @Test
+    public void tesKlikButtonTambah(){
+
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("+")));
+    }
+
+    @Test
     public void tesKlikButtonKurang(){
 
-        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button_sub)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("-")));
+    }
+    @Test
+    public void tesKlikButtonSamaDengan(){
+
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("=")));
     }
 
     @Test
@@ -128,5 +148,34 @@ public class TesKlikButton {
         onView(withId(R.id.input)).check(matches(withText("+")));
     }
 
+    @Test
+    public void tesKlikButtontesTambah(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("14")));
+    }
 
+    @Test
+    public void tesKliktambahkurang(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10")));
+    }
+
+    @Test
+    public void tesKliktambahkali(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("28")));
+    }
 }
