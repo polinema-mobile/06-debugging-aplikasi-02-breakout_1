@@ -178,4 +178,26 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("28")));
     }
+
+    @Test
+    public void tesKliktambahbagi(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("10.5")));
+    }
+
+    @Test
+    public void tesKliktambahpersen(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("7.14")));
+    }
 }
